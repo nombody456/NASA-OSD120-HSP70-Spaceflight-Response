@@ -6,7 +6,7 @@ In my high school honors biology class, I learned that through evolution, organi
 Hello, my name is Shahriyar Amaan! Today, I'm walking you through my data pipeline investigating whether the chronic physiological stress of microgravity blunts or hyper-activates the transcriptional upregulation of Heat Shock Protein families inside *Arabidopsis thaliana* roots. To pull the curtain back on this molecular defense system, I went straight to the raw source: NASA's Open Science Data Repository.
 
 ## Hypothesis
-Based on my previous undertanding of cellular stress, my initial hypothesis was that the physical disruption of spaceflight microgravity would hyper-activate the plant root's Heat Shock Protein 70 (HSP70) network across its organelles to protect vulnerable folding proteins.
+Based on my previous understanding of cellular stress, my initial hypothesis was that the physical disruption of spaceflight microgravity would hyper-activate the plant root's Heat Shock Protein 70 (HSP70) network across its organelles to protect vulnerable folding proteins.
 
 ## Project Overview
 This project is a Space Biology Bioinformatics pipeline designed to analyze the secondary transcriptomic response of first-generation *Arabidopsis thaliana* root tissue (Col-0) subjected to spaceflight stress. The repository processes raw RNA-Seq data from the **NASA Open Science Data Repository (OSDR), Dataset ID: OSD-120** (240 MB, 24,000 columns × 539 rows).
