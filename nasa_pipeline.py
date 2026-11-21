@@ -32,12 +32,12 @@ all_columns = list(df.columns)
     #print(f"Index {index}: {name}")
 
 # ====================================================================
-# PHASE I PROJECT CALCULATIONS: VARIABLE INITIALIZATION
+# PHASE I PROJECT CALCULATIONS
 # ====================================================================
 
 # Save the exact text strings of the target columns into clean variables
-LFC_COL = 'Log2fc_(Col-0 & Ground Control & Dark Treatment)v(Col-0 & Space Flight & Dark Treatment)'
-PVAL_COL = 'P.value_(Col-0 & Ground Control & Dark Treatment)v(Col-0 & Space Flight & Dark Treatment)'
+LFC_COL = 'Log2fc_(Col-0 & Space Flight & Dark Treatment)v(Col-0 & Ground Control & Dark Treatment)'
+PVAL_COL = 'P.value_(Col-0 & Space Flight & Dark Treatment)v(Col-0 & Ground Control & Dark Treatment)'
 
 # 7. Print the first 5 rows of the chosen columns alongside the TAIR column to verify access
 # Pass a list of our target column variables straight into .head()
@@ -124,7 +124,7 @@ percentages = hsp_panel_df['Calculated_Percentage_Change'].tolist()
 plt.figure(figsize=(8, 6))
 
 # 4. Draw the vertical pillars using our compartments as X and percentages as Y
-plt.bar(compartments, percentages, color='slategray', edgecolor='black', width=0.5)
+bars = plt.bar(compartments, percentages, color='slategray', edgecolor='black', width=0.5)
 
 # 5. Stamp a distinct horizontal line right at 0% to highlight the downward drop
 plt.axhline(0, color='black', linewidth=1.2, linestyle='--')
@@ -132,10 +132,11 @@ plt.axhline(0, color='black', linewidth=1.2, linestyle='--')
 #6. Apply clear axis labels and a descriptive title
 plt.ylabel('Transcriptional Modification  (% Change vs Earth)', fontsize=12, fontweight='bold')
 plt.xlabel('Cellular Organelle Compartment', fontsize=12, fontweight='bold')
-plt.title('Transcriptomic Blunting of Root HSP70 Network\nUnder Spaceflight Conditions (OSD-120)', fontsize=13, fontweight='bold', pad=15)
+plt.title('Compartmental Response of Root HSP70 Network\nUnder Spaceflight Conditions (OSD-120)', fontsize=13, fontweight='bold', pad=15)
 
 # 7. Set strict y-axis viewing grid limits to wrap our negative percentages neatly
-plt.ylim(-60, 20)
+plt.ylim(-10, 100)
+plt.bar_label(bars, fmt='+%.2f%%', padding=4, fontweight='bold', fontsize=11)
 
 # 8. Save a high-resolution 300 DPI image file directly to our folder
 plt.savefig('hsp_blunting_analysis.png', dpi=300, bbox_inches='tight')
