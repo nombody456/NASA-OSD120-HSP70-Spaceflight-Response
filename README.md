@@ -25,11 +25,13 @@ $$\text{Percentage Change} = \left(2^{\log_2\text{FC}} - 1\right) \times 100\%$$
 ## Discovery Summary
 By isolating primary responder genes in the HSP70 network across three separate cellular compartments, the project systematically screens expression behavior against an alpha significance threshold ($p \le 0.05$):
 
-* **Cytoplasm Fluid (`AT3G12580`)**: $p = 0.180339$ | **-45.17% Downregulation**
-* **Endoplasmic Reticulum (`AT5G42020`)**: $p = 0.209179$ | **-24.03% Downregulation**
-* **Mitochondria Battery (`AT5G09590`)**: $p = 0.889134$ | **-4.01% Flatline**
+* **Cytoplasm Fluid (`AT3G12580`)**: $p = 0.180339$ | **+82.41% Upregulation**
+* **Endoplasmic Reticulum (`AT5G42020`)**: $p = 0.209179$ | **+31.64% Upregulation**
+* **Mitochondria Battery (`AT5G09590`)**: $p = 0.889134$ | **+4.18% Baseline Stability**
 
-**Conclusion:** The statistically non-significant p-values rule out the assumption of generalized spaceflight cellular panic. Instead, the uniform downward trajectory points toward **Resource Suppression**—the organism downregulates its heavy chaperone budget by up to 45% in orbit to conserve precious ATP energy currency for long-term space survival, a phenomenon known as Transcriptomic Blunting.
+![Compartmental Response of Root HSP70 Network](hsp_blunting_analysis.png)
+
+**Conclusion:** The positive fold changes in the Cytoplasm (+82.41%) and Rough ER (+31.64%) align with my initial hypothesis that microgravity triggers targeted protein-folding chaperone upregulation, while the Mitochondria (+4.18%) remains stable to preserve vital ATP energy production. However, because all p-values exceed $\alpha = 0.05$, we fail to reject the null hypothesis—reflecting high biological variability across small spaceflight sample sizes rather than a statistically guaranteed systemic panic.
 
 ## Self-Reflection & Future Plans
 As someone who independently learned to code through the CS50P course, this was my first major programming project. In my opinion, new learners should never wait until they know every skill before starting. I learned far more from making mistakes along the way than I would have if I had tried to plan the entire project perfectly beforehand. Along the way, I overcame several obstacles:
@@ -38,7 +40,7 @@ As someone who independently learned to code through the CS50P course, this was 
 * **Narrowing My Research Scope:** My initial parameters were far too broad—I simply wanted to compare Earth and Space samples of *Arabidopsis thaliana*. Through background research, I narrowed my focus specifically to the HSP70 gene family under dark treatment in the Col-0 ecotype, isolating root tissue since that is where the plant is most responsive to stress.
 * **Automating Data Visualization:** When I first finished the analysis using NumPy and Pandas, I didn't know how to visualize the output and briefly considered sketching the graph by hand and uploading a photo. Learning Matplotlib allowed me to generate clean visuals—saving everyone from my horrible sketching skills!
 
-Overall, I am proud of this project and deeply enjoyed building it. One major limitation is that I only analyzed three HSP70 genes. While these are major players in the cell's defense system, a small sample size carries higher variability, and analyzing a larger gene set will yield stronger statistical power. For Phase 2 of this continuation project, I plan to expand my pipeline to process more genes and environmental variables to see how *Arabidopsis thaliana* manages cellular stress while conserving its ATP.
+Overall, I am proud of this project and deeply enjoyed building it. A key limitation of this initial phase is analyzing only three HSP70 genes, as a smaller sample size introduces higher variability and keeps p-values above 0.05 despite strong percentage increases in the cytoplasm and ER. For Phase 2, I plan to expand this pipeline to explore broader datasets, additional gene families, or new environmental variables to better understand how spaceflight shapes cellular stress responses and energy conservation.
 
 ---
 *Copyright (c) 2026 Shahriyar Amaan. All rights reserved.*
