@@ -1,4 +1,4 @@
-# Transcriptomic Blunting & Localized Resource Suppression in *Arabidopsis thaliana* Roots
+# Transcriptomic Response & Compartmental HSP70 Upregulation in *Arabidopsis thaliana* Roots
 
 ## Inspiration for the Research
 In my high school honors biology class, I learned that through evolution, organisms develop genes to adapt to their environments. If you throw a living Earth organism into the extreme environment of Earth's orbit, its cells face a massive structural crisis. Back home, severe stress forces a plant to launch an immediate molecular rescue team. Out in the microgravity of space, do these defense systems actually work, or do they completely collapse? 
